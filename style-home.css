@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+ body {
+    background-color: rgba(88, 20, 121, 1);
+    height: 1300px;
+ }
+
+  /*HEADER*/
+  
+header{
+    background-color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+header a {
+    color: rgba(88, 20, 121, 1);
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight:800;
+    color: rgba(88, 20, 121, 1);
+    font-family: sans-serif;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links {
+    transition: 0.4s ease;
+}
+
+.nav-links:hover {
+    color: red;
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: rgba(88, 20, 121, 1);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:768px){
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+       transform: translateY(8px) rotate(45deg)
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #fff;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-items{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+/*MAIN*/
+
+.first-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.first-section h1 {
+    font-size: 60px;
+    margin-left: 16px;
+    color: yellow;
+
+    position: absolute;
+    right: 80px;
+    z-index: 0;
+}
+
+.first-section span {
+    background: url(./assets/theholies.jpg) center/cover;
+    width: 200px;
+    height: 300px;
+    margin: 20px 10px 20px 0;
+    border-bottom: solid white 10px;
+    border-top: solid white 10px;
+    border-radius: 10px;
+}
+
+@media screen and (min-width:600px) {
+    .first-section h1 {
+        font-size: 80px;
+    }
+
+    .first-section span {
+        width: 250px;
+    }
+    
+}
+
+@media  screen and (min-width:900px) {
+    .first-section span {
+        width:350px;
+    }
+}
+
+@media screen and (min-width:1130px){
+    .first-section h1 {
+        font-size: 100px;
+    }
+    
+    .first-section span {
+        width: 450px;
+        height: 350px;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: 2s ;
+    
+}
+
+.show {
+    visibility: initial;
+    transform: translateX(0);
+    transition: 2s ;
+    
+}
+

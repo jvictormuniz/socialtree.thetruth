@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+ body {
+    background-color: rgba(88, 20, 121, 1);
+ }
+
+  /*HEADER*/
+  
+header{
+    background-color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+header a {
+    color: rgba(88, 20, 121, 1);
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight:800;
+    color: rgba(88, 20, 121, 1);
+    font-family: sans-serif;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links {
+    transition: 0.4s ease;
+}
+
+.nav-links:hover {
+    color: red;
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: rgba(88, 20, 121, 1);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:768px){
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+       transform: translateY(8px) rotate(45deg)
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #fff;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-items{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+/*MAIN*/
+
+.jvv {
+    width: 100%;
+    height: 400px;
+    background: url(./assets/jvv-main1.png)center/cover;
+    background-attachment: fixed;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: yellow;
+}
+
+.mission {
+    height: 400px;
+    background: url(./assets/jvv-main2.png) center/cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission h3 {
+    color: white;
+}
+
+.mission h1 {
+    color: yellow;
+    text-align:center;
+}
+
+.vision {
+    height: 400px;
+    background: url(./assets/jvv-main3.png) center/cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vision h3 {
+    color: white;
+}
+
+.vision h1 {
+    color: yellow;
+    text-align:center;
+}
+
+.values h3{
+    color: white;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.values div img {
+    width: 100%;
+}
+
+.lidership {
+    height: 500px;
+    background: url(./assets/jvv-main1.png) center/cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    grid-template-areas: "title title" "JoaoGabriel SuannyCunha";
+    align-items: center;
+}
+
+.lidership-title {
+    grid-area: title;
+    color: white;
+    text-align: center;
+}
+
+.joaogabriel {
+    background: url(./assets/JoaoGabriel2.jpg) center/cover;
+    width: auto;
+    height: 400px;
+    margin: 10px 0 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 16px 0;
+}
+
+.joaogabriel h3{
+    color: rgba(88, 20, 121, 1);
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 0 16px ;
+}
+
+.joaogabriel a {
+    text-decoration: none;
+}
+
+.suannycunha {
+    background: url(./assets/SuannyCunha.jpg) center/cover;
+    width: auto;
+    height: 400px;
+    margin: 10px 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 0 16px 16px 0;
+} 
+
+.suannycunha h3 {
+    color: rgba(88, 20, 121, 1);
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 16px 0;
+}
+
+.suannycunha a {
+    text-decoration: none;
+}
+/*FOOTER*/
+footer {
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    font-size: 25px;
+    margin-right: 20px; 
+    gap: 10px;   
+}
+
+.address {
+    margin-left: 20px;
+    color: rgba(88, 20, 121, 1);
+}
+
+.jvv-title, .mission-title, .vision-title, .values-title, .lidership-title, .joaogabriel, .suannycunha, .mission-written, .vision-written, .values-written{
+    visibility: hidden;
+}
+
