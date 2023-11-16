@@ -20,3 +20,6 @@ const myObserver = new IntersectionObserver((entries) => {
 
  elements.forEach( (element) => myObserver.observe(element))
 
+
+
+

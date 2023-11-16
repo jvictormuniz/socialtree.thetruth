@@ -6,8 +6,7 @@
 }
  body {
     background-color: rgba(88, 20, 121, 1);
-    height: 1300px;
- }
+}
 
   /*HEADER*/
   
@@ -130,29 +129,17 @@ header a {
 
 .first-section span {
     background: url(./assets/theholies.jpg) center/cover;
-    width: 200px;
+    background-attachment: fixed;
+    width: 50%;
     height: 300px;
-    margin: 20px 10px 20px 0;
-    border-bottom: solid white 10px;
-    border-top: solid white 10px;
-    border-radius: 10px;
+    margin: 0;
 }
 
 @media screen and (min-width:600px) {
     .first-section h1 {
         font-size: 80px;
     }
-
-    .first-section span {
-        width: 250px;
-    }
     
-}
-
-@media  screen and (min-width:900px) {
-    .first-section span {
-        width:350px;
-    }
 }
 
 @media screen and (min-width:1130px){
@@ -160,23 +147,69 @@ header a {
         font-size: 100px;
     }
     
-    .first-section span {
-        width: 450px;
-        height: 350px;
-    }
 }
 
 .hidden {
     visibility: hidden;
-    transform: translateX(100%);
-    transition: 2s ;
+    transform: translateX(-100%);
+    transition: 1.5s ;
     
 }
 
 .show {
     visibility: initial;
     transform: translateX(0);
-    transition: 2s ;
+    transition: 1.5s ;
+}
+
+.divider  h3{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: rgba(88, 20, 121, 1);
+}
+
+.services {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.services div {
+    font-size: 35px;
+    margin-left: 80px;
+    color: yellow;
+    position: absolute;
+    z-index: 0;
+    right: 10px;
+}
+
+.services div p {
+    font-size: 20px;
+    color: white;
+}
+
+
+.services span {
+    background: url(./assets/service1.jpg) center/cover;
+    background-attachment: fixed;
+    width: 50%;
+    height: 600px;
+}
+
+@media screen and (min-width:600px) {
+    .services div {
+        font-size: 40px;
+    }
     
 }
 
+@media screen and (min-width:1130px){
+    .services div {
+        font-size: 50px;
+        position: relative;
+    }
+    
+}
