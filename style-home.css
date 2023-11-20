@@ -117,6 +117,7 @@ header a {
     align-items: center;
     justify-content: right;
 }
+
 .first-section h1 {
     font-size: 60px;
     margin-left: 16px;
@@ -213,3 +214,75 @@ header a {
     }
     
 }
+
+.GC {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.GC h3 {
+    color: yellow;
+    font-size: 20px;
+    text-align: left;
+    margin: 10px;
+}
+
+.GC h4 {
+    color: white;
+    text-align: center;
+    margin: 15px 10px;
+}
+
+.GC a {
+    color: yellow;
+    text-decoration: none;
+}
+.GC span {
+    width: 100%;
+    height: 300px;
+    background: url(./assets/gruposdeconexao.jpg) center/cover;
+    background-attachment: fixed;
+}
+
+.GPS {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.GPS div {
+    position: absolute;
+    width: 340px;
+    left: 20px;
+    z-index: 0;
+}
+
+.GPS div h2 {
+    color: yellow;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.GPS p {
+    font-size: 20px;
+    color: white;
+}
+.GPS a {
+    text-decoration: none;
+    color: yellow;
+}
+.GPS span {
+    background: url(./assets/comunicaçaojvv2.jpg) center/cover;
+    background-attachment: fixed;
+    width: 60%;
+    height: 600px;
+    
+}
+
+
+
+
+
